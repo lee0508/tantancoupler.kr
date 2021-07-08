@@ -1,0 +1,31 @@
+# This file was updated by Duplicator on 2018-04-25 15:44:12. See .htaccess.orig for the original .htaccess file.
+# Please note that other plugins and resources write to this file. If the time-stamp above is different
+# than the current time-stamp on the file system then another resource has updated this file.
+# Duplicator only writes to this file once during the install process while running the installer.php file.
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+# END WordPress
+#### 그누보드5 rewrite BEGIN #####
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^content/([0-9a-zA-Z_]+)$  bbs/content.php?co_id=$1&rewrite=1  [QSA,L]
+RewriteRule ^content/([^/]+)/$  bbs/content.php?co_seo_title=$1&rewrite=1      [QSA,L]
+RewriteRule ^rss/([0-9a-zA-Z_]+)$  bbs/rss.php?bo_table=$1        [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)$  bbs/board.php?bo_table=$1&rewrite=1      [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)/([^/]+)/$ bbs/board.php?bo_table=$1&wr_seo_title=$2&rewrite=1      [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)/write$  bbs/write.php?bo_table=$1&rewrite=1    [QSA,L]
+RewriteRule ^([0-9a-zA-Z_]+)/([0-9]+)$  bbs/board.php?bo_table=$1&wr_id=$2&rewrite=1  [QSA,L]
+</IfModule>
+#### 그누보드5 rewrite END #####
