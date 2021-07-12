@@ -13,6 +13,12 @@ include_once(G5_LIB_PATH.'/poll.lib.php');
 include_once(G5_LIB_PATH.'/visit.lib.php');
 include_once(G5_LIB_PATH.'/connect.lib.php');
 include_once(G5_LIB_PATH.'/popular.lib.php');
+/** thumb_width, thumb_height : benner Image width. height size */
+/**메인슬라이드 때문에 추가 */
+$options = array();
+$options['thumb_width'] = '1920';
+$options['thumb_height'] = '680';
+echo latest('theme/main_slider', 'main_slider', 5, 23, 0, $options);
 ?>
 <style>
     #hd { 
@@ -22,7 +28,16 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
     }
     #tnb .inner ul#hd_qnb li a { color: #212121; }
 	#hd_wrapper { height: 120px; background: #fff linear-gradient(0deg, #ededed, #e9e9e9)}
-    #hd_wrapper #logo img { position: absolute; top: 0; left: 0; }
+    #hd_wrapper #logo img { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 20%; 
+        height: auto; 
+        object-fit: cover;
+        padding-top: 10px;
+        padding-right: 50px;
+    }
     .hd_sch_wr,  #hd_sch { display: none; }
     .hd_login li a { color:#121212; }
 </style>
@@ -46,12 +61,13 @@ include_once(G5_LIB_PATH.'/popular.lib.php');
 	        </ul>
 		</div>
     </div>
+
     <div id="hd_wrapper">
 
         <div id="logo">
-            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_THEME_URL ?>/logo.jpg" alt="<?php echo $config['cf_title']; ?>"></a>
+            <a href="<?php echo G5_URL ?>"><img src="<?php echo G5_THEME_URL ?>/logo01a.png" alt="<?php echo $config['cf_title']; ?>"></a>
         </div>
-        <p style="display: inline-block; color: #191919; z-index: 9; margin: 44px 0 50px 132px; "><span style="font-size: 2.5em; font-weight: 700; ">(주)창성기술</span></p>
+        <p style="display: inline-block; color: #191919; z-index: 9; margin: 34px 0 30px 200px; "><span style="font-size: 2.5em; font-weight: 700; ">(주)창성기술</span></p>
     
         <div class="hd_sch_wr">
             <fieldset id="hd_sch">

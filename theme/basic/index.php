@@ -178,6 +178,8 @@ include_once(G5_THEME_PATH.'/head.php');
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 10px;
+        /* border: 1px solid #121212; */
     } 
     div.product section.product_a .product_a_contents ul {
         padding: 0;
@@ -187,6 +189,7 @@ include_once(G5_THEME_PATH.'/head.php');
         height: 60px;
         margin: 0 auto;
         padding-top: 30px;
+        /* padding-bottom: 30px; */
         /* box-sizing: border-box; */
      }
     div.product section.product_a .product_a_contents ul li {
@@ -196,6 +199,7 @@ include_once(G5_THEME_PATH.'/head.php');
         /* position: absolute; */
         /* top: 20px; */
         /* left: 100px; */
+        /* border: 1px solid; */
         font-size: 1.8em;
         font-weight: 700;
         text-align: center;
@@ -203,9 +207,38 @@ include_once(G5_THEME_PATH.'/head.php');
         /* padding-top: 30px; */
     }
     div.product section.product_a .product_a_contents img {
-        
+        /* border-bottom: 1px solid; */
+        /* border-right: 1px solid; */
+        border: 1px solid;
+        border-radius: 10px;
         width: 200px;
-        padding: 50px 10px 10px 10px;
+        margin: 20px 0 0 10px;
+        background: #091921;
+        box-shadow: -2px -2px 5px rgba(255,255,255,0.05),
+                        3px 3px 3px rgba(0,0,0,0.3),
+                        inset -2px -2px 5px rgba(255,255,255,0.05),
+                        inset 3px 3px 3px rgba(0,0,0,0.3);
+        /* padding: 50px 10px 10px 10px; */
+    }
+    div.product section.product_a .product_a_contents .product_a_contents_detail img:nth-child(1):hover {
+        cursor: pointer;
+        border: 2px solid #f90999;
+        color: #ccc;
+    }
+    div.product section.product_a .product_a_contents .product_a_contents_detail img:nth-child(2):hover {
+        cursor: pointer;
+        border: 2px solid #f90999;
+        color: #ccc;
+    }
+    div.product section.product_a .product_a_contents .product_a_contents_detail img:nth-child(3):hover {
+        cursor: pointer;
+        border: 2px solid #f90999;
+        color: #ccc;
+    }
+    div.product section.product_a .product_a_contents .product_a_contents_detail img:last-child:hover {
+        cursor: pointer;
+        border: 2px solid #f90999;
+        color: #ccc;
     }
 	div.product section.product_b { 
         /* border: 1px solid;  */
@@ -246,8 +279,11 @@ include_once(G5_THEME_PATH.'/head.php');
         padding-bottom: 50px;
     }
     
-    div.product section.product_b .product_b_contents img {        
+    div.product section.product_b .product_b_contents img {    
+        /* border: 1px solid; */
+        /* border-radius: 10px;     */
         width: 200px;
+        /* height: 450px; */
         padding: 50px 10px 10px 10px;
     }
 	div.product section.product_c { 
@@ -315,12 +351,12 @@ include_once(G5_THEME_PATH.'/head.php');
                 <li>획기적인 기술로</li>
                 <li>가장 경제적인 원터치 철근 커플러</li>
             </ul>
+            <br><br><br>
             <div class="product_a_contents_detail">
-                <img src="https://via.placeholder.com/180x240.png?text=Product1">
-                <img src="https://via.placeholder.com/180x240.png?text=Product2">
-                <img src="https://via.placeholder.com/180x240.png?text=Product3">
-                <img src="https://via.placeholder.com/180x240.png?text=Product4">
-                <img src="https://via.placeholder.com/180x240.png?text=Product5">
+                <img src="<?php echo G5_THEME_URL ?>/item02.png">
+                <img src="<?php echo G5_THEME_URL ?>/item03.png">
+                <img src="<?php echo G5_THEME_URL ?>/item04.png">
+                <img src="<?php echo G5_THEME_URL ?>/item05.png">
             </div>
         </div>	
 	</section>
